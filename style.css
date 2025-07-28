@@ -1,0 +1,96 @@
+/* 基本重設與字體 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif; /* 使用襯線字體模仿舊時代感 */
+    overflow: hidden; /* 防止捲動 */
+}
+
+/* 遊戲主畫面 */
+.game-screen {
+    width: 100vw; /* 視窗寬度 */
+    height: 100vh; /* 視窗高度 */
+    background-image: url('/Users/bowei/Desktop/css/A first-person perspective image in the style of _Red Dead Redemption 2_, featuring a character facing the viewer_AI Ex.jpg'); /* 設定背景圖片 */
+    background-size: cover; /* 填滿畫面 */
+    background-position: center; /* 置中 */
+    display: flex; /* 使用 flexbox 來定位對話框 */
+    justify-content: center; /* 水平置中 */
+    align-items: flex-end; /* 垂直置底 */
+    position: relative;
+}
+
+/* 對話容器 */
+.dialogue-container {
+    width: 70%; /* 寬度 */
+    max-width: 900px; /* 最大寬度 */
+    background-color: rgba(0, 0, 0, 0.75); /* 半透明黑色背景 */
+    color: #e0dcd1; /* 略帶米黃色的文字，RDR2 風格 */
+    padding: 20px;
+    margin-bottom: 30px; /* 離底部距離 */
+    border: 2px solid #5a4a3a; /* 棕色邊框 */
+    border-radius: 3px; /* 微小的圓角 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* 輕微陰影增加立體感 */
+    font-size: 1.1em; /* 字體稍大 */
+}
+
+/* NPC 區域 */
+#npc-area {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #5a4a3a; /* 分隔線 */
+    padding-bottom: 10px;
+}
+
+.npc-name {
+    font-weight: bold;
+    color: #c8b09a; /* 稍亮的棕色 */
+    display: block; /* 佔滿一行 */
+    margin-bottom: 5px;
+}
+
+.npc-dialogue {
+    margin: 0;
+    line-height: 1.5; /* 行高 */
+}
+
+/* 玩家互動區域 */
+#player-area {
+    display: flex; /* 讓輸入框和按鈕並排 */
+    align-items: center; /* 垂直居中對齊 */
+}
+
+#player-input {
+    flex-grow: 1; /* 佔滿剩餘空間 */
+    padding: 10px;
+    border: 1px solid #5a4a3a;
+    background-color: #2a2a2a; /* 深色背景 */
+    color: #e0dcd1;
+    font-family: inherit; /* 繼承字體 */
+    font-size: 1em;
+    margin-right: 10px; /* 與按鈕間距 */
+    border-radius: 2px;
+}
+
+#player-input::placeholder {
+    color: #8a8a8a; /* 提示文字顏色 */
+}
+
+#send-button {
+    padding: 10px 20px;
+    border: 1px solid #5a4a3a;
+    background-color: #4a3a2a; /* 按鈕背景色 */
+    color: #e0dcd1;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* 過渡效果 */
+    border-radius: 2px;
+}
+
+#send-button:hover {
+    background-color: #6a5a4a; /* 滑鼠懸停效果 */
+}
+
+#send-button:active {
+    background-color: #3a2a1a; /* 按下效果 */
+}
